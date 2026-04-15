@@ -1,7 +1,7 @@
 # 🪙 Carthaginian Shekel 3D Viewer
 
 <p align="center">
-  <img src="./public/img_screenshot/banner.svg" alt="banner"/>
+  <img src="public/img_screenshot/banner.svg" alt="banner"/>
 </p>
 
 <p align="center">
@@ -27,26 +27,26 @@ The project focuses on:
 ## 🎬 Demo
 
 <p align="center">
-  <img src="./public/img_screenshot/demo.gif" width="700"/>
+  <img src="public/img_screenshot/demo.gif" width="700"/>
 </p>
 
 ---
 
 ## 🎥 Full Video (Release)
 
-👉 [Download / Watch full demo](./public/video/CarthaginianShekel3D.mp4)
+👉 [Download / Watch full demo](public/video/CarthaginianShekel3D.mp4)
 
 ---
 
 ## 🖼️ Screenshots
 
 <p align="center">
-  <img src="./public/img_screenshot/screenshot_1.png" width="48%"/>
-  <img src="./public/img_screenshot/screenshot_2.png" width="48%"/>
+  <img src="public/img_screenshot/screenshot_1.png" width="48%"/>
+  <img src="public/img_screenshot/screenshot_2.png" width="48%"/>
 </p>
 
 <p align="center">
-  <img src="./public/img_screenshot/screenshot_3.png" width="40%"/>
+  <img src="public/img_screenshot/screenshot_3.png" width="40%"/>
 </p>
 
 ---
