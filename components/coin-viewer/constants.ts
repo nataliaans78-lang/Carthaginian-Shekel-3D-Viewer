@@ -1,6 +1,8 @@
 import type { Language, PresetName } from "./copy";
 
-export const MODEL_URL = "/carthaginian-shekel.glb";
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+export const MODEL_URL = `${BASE_PATH}/carthaginian-shekel.glb`;
 
 export const INITIAL_ROTATION: [number, number, number] = [0.03, -0.22, 0];
 
