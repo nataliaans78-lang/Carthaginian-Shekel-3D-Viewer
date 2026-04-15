@@ -1,4 +1,4 @@
-# 🪙 Carthaginian Shekel 3D Viewer
+# 🏛️ Carthaginian Shekel 3D Viewer
 
 <p align="center">
   <img src="public/img_screenshot/banner.png" alt="banner"/>
