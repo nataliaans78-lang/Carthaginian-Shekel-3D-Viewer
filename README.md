@@ -36,9 +36,14 @@ https://github.com/nataliaans78-lang/Carthaginian-Shekel-3D-Viewer/releases/tag/
 
 ## 🖼️ Screenshots
 
-![Screenshot 1](public/img_screenshot/screenshot_1.png)  
-![Screenshot 2](public/img_screenshot/screenshot_2.png)  
-![Screenshot 3](public/img_screenshot/screenshot_3.png)
+<p align="center">
+  <img src="public/img_screenshot/screenshot_1.png" width="48%"/>
+  <img src="public/img_screenshot/screenshot_2.png" width="48%"/>
+</p>
+
+<p align="center">
+  <img src="public/img_screenshot/screenshot_3.png" width="35%"/>
+</p>
 
 ---
 
