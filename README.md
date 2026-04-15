@@ -1,79 +1,81 @@
 # 🏛️ Carthaginian Shekel 3D Viewer
 
-<p align="center">
-  <img src="public/img_screenshot/banner.png" alt="banner"/>
-</p>
+![Banner](public/img_screenshot/banner.png)
+
+🌐 **Live Demo:**  
+https://nataliaans78-lang.github.io/Carthaginian-Shekel-3D-Viewer/
 
 ---
 
 ## ✨ Overview
 
-Interactive **3D viewer of a Carthaginian Shekel coin** built with modern web technologies.
+Interactive 3D viewer of a Carthaginian Shekel coin built with modern web technologies.
 
-The project focuses on:
-- realistic rendering
-- immersive lighting presets
-- smooth user interaction
-- clean, modern UI inspired by digital museum experiences
+- realistic rendering  
+- lighting presets (museum / gallery)  
+- smooth interaction  
+- responsive UI  
 
 ---
 
 ## 🎬 Demo
 
-<p align="center">
-  <img src="public/img_screenshot/demo.gif" width="700"/>
-</p>
+![Demo](public/img_screenshot/demo.gif)
 
 ---
 
 ## 🎥 Full Video
 
-👉 [⬇️ Download demo (MP4)](https://github.com/nataliaans78-lang/Carthaginian-Shekel-3D-Viewer/releases/download/v1.0/CarthaginianShekel3D.mp4)  
-👉 [📦 View release](https://github.com/nataliaans78-lang/Carthaginian-Shekel-3D-Viewer/releases/tag/v1.0)
+⬇️ Download demo (MP4):  
+https://github.com/nataliaans78-lang/Carthaginian-Shekel-3D-Viewer/releases/download/v1.0/CarthaginianShekel3D.mp4  
+
+📦 Release page:  
+https://github.com/nataliaans78-lang/Carthaginian-Shekel-3D-Viewer/releases/tag/v1.0
 
 ---
 
 ## 🖼️ Screenshots
 
-<p align="center">
-  <img src="public/img_screenshot/screenshot_1.png" width="48%"/>
-  <img src="public/img_screenshot/screenshot_2.png" width="48%"/>
-</p>
-
-<p align="center">
-  <img src="public/img_screenshot/screenshot_3.png" width="30%"/>
-</p>
+![Screenshot 1](public/img_screenshot/screenshot_1.png)  
+![Screenshot 2](public/img_screenshot/screenshot_2.png)  
+![Screenshot 3](public/img_screenshot/screenshot_3.png)
 
 ---
 
 ## 🚀 Features
 
-- 🪙 High-quality **3D coin rendering (GLB)**
-- 💡 **Lighting presets**
-  - Museum mode
-  - Gallery mode
-- 🎮 Interactive controls (rotate / zoom)
-- 📱 Responsive UI (desktop + mobile)
-- ⚡ Optimized for performance (Next.js export)
+- 3D coin rendering (GLB)  
+- Museum / Gallery lighting  
+- Rotate / zoom interaction  
+- Mobile support  
 
 ---
 
 ## 🧠 Tech Stack
 
-- **Next.js 13**
-- **Three.js**
-- **React**
-- **GLTF / GLB models**
-- **Custom lighting setup**
+- Next.js  
+- Three.js  
+- React  
 
 ---
 
 ## 🛠️ Installation
 
-```bash
-npm install
-npm run dev
+npm install  
+npm run dev  
 
-Open:
+Open:  
+http://localhost:3000  
 
-http://localhost:3000
+---
+
+## 📚 Credits
+
+Texture source:  
+https://upload.wikimedia.org/wikipedia/commons/5/52/Carthage_EL_shekel_2250014.jpg  
+
+---
+
+## 📜 License
+
+Educational & portfolio use.
