@@ -26,9 +26,10 @@ The project focuses on:
 
 ---
 
-## 🎥 Full Video (Release)
+## 🎥 Full Video
 
-👉 [Download / Watch full demo](public/video/CarthaginianShekel3D.mp4)
+👉 [⬇️ Download demo (MP4)](https://github.com/nataliaans78-lang/Carthaginian-Shekel-3D-Viewer/releases/download/v1.0/CarthaginianShekel3D.mp4)  
+👉 [📦 View release](https://github.com/nataliaans78-lang/Carthaginian-Shekel-3D-Viewer/releases/tag/v1.0)
 
 ---
 
