@@ -1,13 +1,7 @@
-# 🪙 Carthaginian Shekel 3D Viewer
+# 🏛️ Carthaginian Shekel 3D Viewer
 
 <p align="center">
   <img src="public/img_screenshot/banner.png" alt="banner"/>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Next.js-13-black"/>
-  <img src="https://img.shields.io/badge/Three.js-3D-blue"/>
-  <img src="https://img.shields.io/badge/WebGL-Interactive-orange"/>
 </p>
 
 ---
@@ -32,9 +26,10 @@ The project focuses on:
 
 ---
 
-## 🎥 Full Video (Release)
+## 🎥 Full Video
 
-👉 [Download / Watch full demo](public/video/CarthaginianShekel3D.mp4)
+👉 [⬇️ Download demo (MP4)](https://github.com/nataliaans78-lang/Carthaginian-Shekel-3D-Viewer/releases/download/v1.0/CarthaginianShekel3D.mp4)  
+👉 [📦 View release](https://github.com/nataliaans78-lang/Carthaginian-Shekel-3D-Viewer/releases/tag/v1.0)
 
 ---
 
