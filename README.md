@@ -1,7 +1,7 @@
 # 🪙 Carthaginian Shekel 3D Viewer
 
 <p align="center">
-  <img src="public/img_screenshot/banner.svg" alt="banner"/>
+  <img src="public/img_screenshot/banner.png" alt="banner"/>
 </p>
 
 <p align="center">
@@ -46,7 +46,7 @@ The project focuses on:
 </p>
 
 <p align="center">
-  <img src="public/img_screenshot/screenshot_3.png" width="40%"/>
+  <img src="public/img_screenshot/screenshot_3.png" width="30%"/>
 </p>
 
 ---
