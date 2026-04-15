@@ -4,12 +4,6 @@
   <img src="public/img_screenshot/banner.png" alt="banner"/>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Next.js-13-black"/>
-  <img src="https://img.shields.io/badge/Three.js-3D-blue"/>
-  <img src="https://img.shields.io/badge/WebGL-Interactive-orange"/>
-</p>
-
 ---
 
 ## ✨ Overview
