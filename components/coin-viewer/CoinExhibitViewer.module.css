@@ -1,0 +1,338 @@
+.viewerRoot {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  background: black;
+  color: white;
+}
+
+.viewerFrame {
+  margin: 0 auto;
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 1880px;
+  flex-direction: column;
+  padding-inline: 1rem;
+}
+
+.topControls {
+  row-gap: 8px;
+}
+
+.mobileInfoToggle,
+.mobileInfoPanel {
+  display: none;
+}
+
+.mobileCanvasLabel {
+  display: none;
+}
+
+.coinShell {
+  width: min(1540px, calc(100vw - 40px));
+  margin: 0 auto;
+  padding: 8px 0;
+  --viewer-h: clamp(360px, 38vw, 500px);
+}
+
+.coinStage {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(320px, 27vw, 420px);
+  gap: clamp(10px, 1vw, 14px);
+  align-items: stretch;
+}
+
+.coinCanvas {
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 1.18 / 1;
+  min-height: var(--viewer-h);
+  max-height: calc(100vh - 150px);
+  overflow: hidden;
+  border-radius: 24px;
+  justify-self: center;
+}
+
+.coinPanel {
+  width: 100%;
+  min-width: 0;
+  max-width: 420px;
+  padding: 0;
+  border-radius: 24px;
+  align-self: center;
+  max-height: calc(100vh - 150px);
+}
+
+.coinPanelInner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: clamp(18px, 1.5vw, 24px);
+}
+
+.coinPanelHeader {
+  display: block;
+  margin-bottom: clamp(10px, 1vw, 12px);
+  padding-right: clamp(70px, 5vw, 76px);
+}
+
+.coinPanelBadge {
+  gap: 8px;
+  padding: 4px 10px;
+  margin-bottom: 8px;
+  font-size: clamp(10px, 0.8vw, 11px);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.56);
+}
+
+.coinPanelTitle {
+  font-size: clamp(34px, 2.7vw, 42px);
+  line-height: 0.92;
+  word-break: normal;
+  overflow-wrap: normal;
+  white-space: normal;
+  max-width: 9ch;
+}
+
+.coinLangSwitcher {
+  position: absolute;
+  top: clamp(14px, 1.2vw, 18px);
+  right: clamp(14px, 1.2vw, 18px);
+  gap: 4px;
+  padding: clamp(3px, 0.4vw, 4px) clamp(6px, 0.6vw, 8px);
+  z-index: 2;
+}
+
+.coinLangButton {
+  padding: clamp(5px, 0.45vw, 6px) clamp(7px, 0.55vw, 8px);
+  font-size: clamp(10px, 0.8vw, 11px);
+}
+
+.coinPanelMeta {
+  font-size: clamp(12px, 0.95vw, 14px);
+}
+
+.coinPanelBody {
+  margin-top: clamp(12px, 1.2vw, 20px);
+  font-size: clamp(12px, 0.95vw, 14px);
+  line-height: clamp(1.45, 1.5vw, 1.68);
+}
+
+.coinPanelBody p + p {
+  margin-top: clamp(10px, 1vw, 16px);
+}
+
+.coinPanelActions {
+  margin-top: auto;
+  padding-top: clamp(24px, 2vw, 32px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.coinPanelButton {
+  padding: clamp(8px, 0.8vw, 10px) clamp(12px, 1vw, 16px);
+  font-size: clamp(12px, 0.95vw, 14px);
+}
+
+@media (max-width: 1440px) {
+  .coinShell {
+    width: min(100%, calc(100vw - 32px));
+    max-width: 1120px;
+    padding: 4px 0;
+    --viewer-h: clamp(300px, 34vw, 440px);
+  }
+
+  .coinStage {
+    grid-template-columns: minmax(0, 1fr) clamp(260px, 28vw, 320px);
+    gap: clamp(8px, 1vw, 10px);
+    align-items: stretch;
+  }
+
+  .coinCanvas {
+    max-width: 100%;
+    min-height: clamp(320px, 36vw, 500px);
+    max-height: calc(100vh - 165px);
+    justify-self: stretch;
+  }
+
+  .coinPanel {
+    max-width: 320px;
+    max-height: calc(100vh - 165px);
+    align-self: center;
+    justify-self: end;
+  }
+
+  .coinPanelInner {
+    padding: clamp(14px, 1.25vw, 18px);
+  }
+
+  .coinPanelHeader {
+    margin-bottom: clamp(8px, 0.8vw, 10px);
+    padding-right: clamp(52px, 5vw, 66px);
+  }
+
+  .coinPanelBadge {
+    gap: 6px;
+    padding: 3px 7px;
+    margin-bottom: clamp(4px, 0.5vw, 6px);
+    font-size: clamp(9px, 0.75vw, 10px);
+    letter-spacing: 0.12em;
+  }
+
+  .coinLangSwitcher {
+    top: clamp(10px, 1vw, 14px);
+    right: clamp(10px, 1vw, 14px);
+    gap: 3px;
+    padding: clamp(2px, 0.3vw, 3px) clamp(5px, 0.5vw, 6px);
+  }
+
+  .coinPanelTitle {
+    font-size: clamp(24px, 2.1vw, 32px);
+    line-height: 0.95;
+    max-width: 11ch;
+  }
+
+  .coinLangButton {
+    padding: clamp(4px, 0.4vw, 5px) clamp(6px, 0.5vw, 7px);
+    font-size: clamp(9px, 0.75vw, 10px);
+  }
+
+  .coinPanelMeta {
+    font-size: clamp(10px, 0.9vw, 12px);
+  }
+
+  .coinPanelBody {
+    margin-top: clamp(8px, 0.9vw, 12px);
+    font-size: clamp(10px, 0.9vw, 12px);
+    line-height: 1.4;
+  }
+
+  .coinPanelBody p + p {
+    margin-top: clamp(6px, 0.8vw, 10px);
+  }
+
+  .coinPanelButton {
+    padding: clamp(7px, 0.7vw, 8px) clamp(10px, 0.9vw, 12px);
+    font-size: clamp(10px, 0.9vw, 12px);
+  }
+
+  .coinPanelActions {
+    padding-top: clamp(16px, 1.6vw, 24px);
+    gap: clamp(4px, 0.6vw, 6px);
+  }
+}
+
+@media (max-width: 1040px) {
+  .topControls {
+    align-items: flex-start;
+  }
+
+  .topControlsGroup {
+    width: auto;
+    max-width: 100%;
+    flex-wrap: nowrap;
+    row-gap: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .coinShell {
+    --viewer-h: auto;
+    width: min(100vw, calc(100vw - 20px));
+    padding: 0;
+  }
+
+  .coinStage {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .coinCanvas {
+    min-height: calc(100svh - 120px);
+    max-height: calc(100svh - 120px);
+    border-radius: 22px;
+  }
+
+  .coinPanel {
+    width: 100%;
+    max-width: 100%;
+    max-height: none;
+    height: auto;
+  }
+
+  .desktopPanel,
+  .canvasOverlayLeft,
+  .canvasOverlayRight,
+  .topControlsHint {
+    display: none !important;
+  }
+
+  .mobileInfoToggle {
+    display: inline-flex !important;
+  }
+
+  .mobileInfoPanel {
+    display: block !important;
+  }
+
+  .mobileCanvasLabel {
+    display: block;
+    max-width: 58%;
+  }
+
+  .coinPanelInner {
+    min-height: unset;
+    padding: 16px;
+  }
+
+  .coinPanelHeader {
+    padding-right: 0;
+  }
+
+  .coinLangSwitcher {
+    position: static;
+    margin-top: 10px;
+    width: fit-content;
+  }
+
+  .coinPanelTitle {
+    font-size: 28px;
+    line-height: 1;
+    max-width: none;
+  }
+
+  .coinPanelMeta {
+    font-size: 12px;
+  }
+
+  .coinPanelBody {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .coinPanelActions {
+    margin-top: 16px;
+    padding-top: 0;
+  }
+
+  .coinPanelButton {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 760px) {
+  .topControls {
+    gap: 8px;
+  }
+
+  .topControlsGroup {
+    width: 100%;
+    flex-wrap: wrap;
+    row-gap: 6px;
+  }
+}
