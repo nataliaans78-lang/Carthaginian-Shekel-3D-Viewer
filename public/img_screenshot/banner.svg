@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="420" viewBox="0 0 1400 420">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050505"/>
+      <stop offset="1" stop-color="#0b0d12"/>
+    </linearGradient>
+
+    <radialGradient id="goldGlow" cx="75%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#f2c977" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#f2c977" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+
+    <filter id="coinShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+
+    <style>
+      .eyebrow { font:600 12px Inter, system-ui, sans-serif; letter-spacing:0.22em; fill:#cda45a; }
+      .title { font:700 54px Inter, system-ui, sans-serif; fill:#f5efe3; }
+      .sub { font:400 18px Inter, system-ui, sans-serif; fill:#d8cbb0; }
+      .chip { font:500 12px ui-monospace, monospace; fill:#e7d3a0; }
+
+      .glow {
+        animation: glow 8s ease-in-out infinite;
+        transform-origin: 1050px 210px;
+      }
+
+      @keyframes glow {
+        0%,100% { opacity: 0.28; transform: scale(1); }
+        50% { opacity: 0.34; transform: scale(1.02); }
+      }
+    </style>
+  </defs>
+
+  <rect width="1400" height="420" fill="url(#bg)"/>
+  <rect width="1400" height="420" fill="url(#goldGlow)"/>
+
+  <g class="glow" filter="url(#softGlow)">
+    <ellipse cx="1050" cy="210" rx="200" ry="140" fill="#d4a24a"/>
+  </g>
+
+  <g transform="translate(80 85)">
+    <text class="eyebrow">ANCIENT GOLD ARTIFACT</text>
+
+    <text class="title" y="60">Carthaginian Shekel</text>
+    <text class="title" y="110">3D Viewer</text>
+
+    <text class="sub" y="165">
+      Interactive 3D visualization with
+    </text>
+    <text class="sub" y="190">
+      museum and gallery lighting presets
+    </text>
+
+    <g transform="translate(0 240)">
+      <rect width="110" height="34" rx="17" fill="#15100b" stroke="#6d5428"/>
+      <text class="chip" x="55" y="22" text-anchor="middle">Next.js</text>
+
+      <rect x="120" width="120" height="34" rx="17" fill="#15100b" stroke="#6d5428"/>
+      <text class="chip" x="180" y="22" text-anchor="middle">Three.js</text>
+
+      <rect x="250" width="180" height="34" rx="17" fill="#15100b" stroke="#6d5428"/>
+      <text class="chip" x="340" y="22" text-anchor="middle">Museum / Gallery</text>
+    </g>
+  </g>
+
+  <g filter="url(#coinShadow)">
+    <image
+      href="coin_tanit.png"
+      x="920"
+      y="80"
+      width="260"
+      height="260"
+      opacity="0.97"
+      preserveAspectRatio="xMidYMid meet"
+    />
+  </g>
+</svg>

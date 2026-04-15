@@ -1,36 +1,84 @@
-# Carthaginian Shekel 3D Viewer
+# 🪙 Carthaginian Shekel 3D Viewer
 
-Projekt oparty o Next.js.
+<p align="center">
+  <img src="./public/img_screenshot/banner.svg" alt="banner"/>
+</p>
 
-## Wymagania
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-13-black"/>
+  <img src="https://img.shields.io/badge/Three.js-3D-blue"/>
+  <img src="https://img.shields.io/badge/WebGL-Interactive-orange"/>
+</p>
 
-- Node.js **20.9+**
-- npm **10+**
+---
 
-## Start lokalny
+## ✨ Overview
+
+Interactive **3D viewer of a Carthaginian Shekel coin** built with modern web technologies.
+
+The project focuses on:
+- realistic rendering
+- immersive lighting presets
+- smooth user interaction
+- clean, modern UI inspired by digital museum experiences
+
+---
+
+## 🎬 Demo
+
+<p align="center">
+  <img src="./public/img_screenshot/demo.gif" width="700"/>
+</p>
+
+---
+
+## 🎥 Full Video (Release)
+
+👉 [Download / Watch full demo](./public/video/CarthaginianShekel3D.mp4)
+
+---
+
+## 🖼️ Screenshots
+
+<p align="center">
+  <img src="./public/img_screenshot/screenshot_1.png" width="48%"/>
+  <img src="./public/img_screenshot/screenshot_2.png" width="48%"/>
+</p>
+
+<p align="center">
+  <img src="./public/img_screenshot/screenshot_3.png" width="40%"/>
+</p>
+
+---
+
+## 🚀 Features
+
+- 🪙 High-quality **3D coin rendering (GLB)**
+- 💡 **Lighting presets**
+  - Museum mode
+  - Gallery mode
+- 🎮 Interactive controls (rotate / zoom)
+- 📱 Responsive UI (desktop + mobile)
+- ⚡ Optimized for performance (Next.js export)
+
+---
+
+## 🧠 Tech Stack
+
+- **Next.js 13**
+- **Three.js**
+- **React**
+- **GLTF / GLB models**
+- **Custom lighting setup**
+
+---
+
+## 🛠️ Installation
 
 ```bash
 npm install
 npm run dev
-```
 
-Aplikacja otworzy się pod:
+Open:
 
-- `http://localhost:3000`
-
-## Start po sieci lokalnej (LAN)
-
-Jeśli chcesz odpalić projekt tak, żeby wejść z innego urządzenia w tej samej sieci:
-
-```bash
-npm run dev:host
-```
-
-W razie potrzeby dopisz swój lokalny adres IP do `allowedDevOrigins` w `next.config.ts`.
-
-## Co zostało poprawione
-
-- uproszczony `dev` script, żeby lokalne odpalanie działało normalnie przez `npm run dev`
-- osobny script `dev:host` do odpalania po `0.0.0.0`
-- poprawione `allowedDevOrigins`, żeby localhost nie był blokowany w devie
-- dopisana wymagana wersja Node.js
+http://localhost:3000
