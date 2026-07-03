@@ -1,86 +1,59 @@
-# 🏛️ Carthaginian Shekel 3D Viewer
+# Carthaginian Coin 3D Viewer
 
 ![Banner](public/img_screenshot/banner.png)
 
-🌐 **Live Demo:**  
-https://nataliaans78-lang.github.io/Carthaginian-Shekel-3D-Viewer/
+An interactive digital visualization inspired by a Carthaginian electrum coin. The referenced coin image shows Tanit on the obverse and a standing horse on the reverse. This project is an interpretive 3D presentation, not an exact museum scan.
 
----
+**Live demo:** https://nataliaans78-lang.github.io/Carthaginian-Shekel-3D-Viewer/
 
-## ✨ Overview
-
-Interactive 3D viewer of a Carthaginian Shekel coin built with modern web technologies.
-
-- realistic rendering  
-- lighting presets (museum / gallery)  
-- smooth interaction  
-- responsive UI  
-
----
-
-## 🎬 Demo
+## Demo
 
 ![Demo](public/img_screenshot/demo.gif)
 
----
+## Video
 
-## 🎥 Full Video
+- [Download the MP4 demo](https://github.com/nataliaans78-lang/Carthaginian-Shekel-3D-Viewer/releases/download/v1.0/CarthaginianShekel3D.mp4)
+- [Open the v1.0 release](https://github.com/nataliaans78-lang/Carthaginian-Shekel-3D-Viewer/releases/tag/v1.0)
 
-⬇️ Download demo (MP4):  
-https://github.com/nataliaans78-lang/Carthaginian-Shekel-3D-Viewer/releases/download/v1.0/CarthaginianShekel3D.mp4  
-
-📦 Release page:  
-https://github.com/nataliaans78-lang/Carthaginian-Shekel-3D-Viewer/releases/tag/v1.0
-
----
-
-## 🖼️ Screenshots
+## Screenshots
 
 <p align="center">
-  <img src="public/img_screenshot/screenshot_1.png" width="48%"/>
-  <img src="public/img_screenshot/screenshot_2.png" width="48%"/>
+  <img src="public/img_screenshot/screenshot_1.png" width="48%" alt="3D coin viewer screenshot" />
+  <img src="public/img_screenshot/screenshot_2.png" width="48%" alt="3D coin viewer screenshot" />
 </p>
 
 <p align="center">
-  <img src="public/img_screenshot/screenshot_3.png" width="35%"/>
+  <img src="public/img_screenshot/screenshot_3.png" width="35%" alt="3D coin viewer screenshot" />
 </p>
 
----
+## Features
 
-## 🚀 Features
+- Interactive GLB rendering
+- Museum and gallery lighting modes
+- Rotate, zoom, and pan controls
+- Responsive interface
 
-- 3D coin rendering (GLB)  
-- Museum / Gallery lighting  
-- Rotate / zoom interaction  
-- Mobile support  
+## Technology
 
----
+- Next.js
+- React
+- Three.js
 
-## 🧠 Tech Stack
+## Local development
 
-- Next.js  
-- Three.js  
-- React  
+```bash
+npm ci
+npm run dev
+```
 
----
+Open http://localhost:3000.
 
-## 🛠️ Installation
+## Credits and asset licensing
 
-npm install  
-npm run dev  
+The coin imagery used as source material is credited to Classical Numismatic Group, Inc. (CNG) and is available from Wikimedia Commons under the Creative Commons Attribution-ShareAlike 2.5 Generic license. The imagery was adapted for the textures and 3D visualization in this project.
 
-Open:  
-http://localhost:3000  
+See [ASSET-LICENSES.md](ASSET-LICENSES.md) for the exact source page, attribution, license terms, and notes about derivative assets.
 
----
+## Source code license
 
-## 📚 Credits
-
-Texture source:  
-https://upload.wikimedia.org/wikipedia/commons/5/52/Carthage_EL_shekel_2250014.jpg  
-
----
-
-## 📜 License
-
-Educational & portfolio use.
+No open-source license has been selected for this project's source code yet. The asset license described above does not automatically license the source code.
