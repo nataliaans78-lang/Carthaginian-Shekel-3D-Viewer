@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useReducedMotion } from "framer-motion";
 import styles from "./CoinExhibitViewer.module.css";
 import CoinScene from "./CoinScene";
 import { UI_BORDER } from "./constants";
@@ -12,8 +13,9 @@ const INTERACTIVE_TARGET_SELECTOR =
   'button, a, input, textarea, select, [contenteditable], [role="button"], [role="link"]';
 
 export default function CoinExhibitViewer() {
+  const prefersReducedMotion = useReducedMotion();
   const [lang, setLang] = useState<Language>("en");
-  const [autoRotate, setAutoRotate] = useState(true);
+  const [autoRotateOverride, setAutoRotateOverride] = useState<boolean | null>(null);
   const [preset, setPreset] = useState<PresetName>("museum");
   const [displayPreset, setDisplayPreset] = useState<PresetName>("museum");
   const [nextPreset, setNextPreset] = useState<PresetName | null>(null);
@@ -24,6 +26,11 @@ export default function CoinExhibitViewer() {
 
   const copy = COPY[lang];
   const ui = UI_BORDER[preset];
+  const autoRotate = autoRotateOverride ?? !prefersReducedMotion;
+
+  const toggleAutoRotate = useCallback(() => {
+    setAutoRotateOverride((value) => !(value ?? !prefersReducedMotion));
+  }, [prefersReducedMotion]);
 
   const changePreset = useCallback(
     (targetPreset: PresetName) => {
@@ -78,13 +85,13 @@ export default function CoinExhibitViewer() {
       }
 
       if (event.key.toLowerCase() === "a") {
-        setAutoRotate((value) => !value);
+        toggleAutoRotate();
       }
     };
 
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [changePreset]);
+  }, [changePreset, toggleAutoRotate]);
 
   return (
     <div className={styles.viewerRoot}>
@@ -95,7 +102,7 @@ export default function CoinExhibitViewer() {
           isMobileInfoOpen={isMobileInfoOpen}
           onChangePreset={changePreset}
           onReset={() => setResetSignal((value) => value + 1)}
-          onToggleAutoRotate={() => setAutoRotate((value) => !value)}
+          onToggleAutoRotate={toggleAutoRotate}
           onToggleMobileInfo={() => setIsMobileInfoOpen((value) => !value)}
           preset={preset}
           ui={ui}
