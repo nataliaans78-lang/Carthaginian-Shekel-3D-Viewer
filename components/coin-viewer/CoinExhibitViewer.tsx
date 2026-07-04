@@ -61,6 +61,10 @@ export default function CoinExhibitViewer() {
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
+      if (event.ctrlKey || event.altKey || event.metaKey) {
+        return;
+      }
+
       const target = event.target;
       if (target instanceof Element && target.closest(INTERACTIVE_TARGET_SELECTOR)) {
         return;
@@ -69,13 +73,11 @@ export default function CoinExhibitViewer() {
       if (event.key === "1") changePreset("museum");
       if (event.key === "2") changePreset("gallery");
 
-      if (event.key === "0") {
-        event.preventDefault();
+      if (event.key.toLowerCase() === "r") {
         setResetSignal((value) => value + 1);
       }
 
-      if (event.code === "Space") {
-        event.preventDefault();
+      if (event.key.toLowerCase() === "a") {
         setAutoRotate((value) => !value);
       }
     };
