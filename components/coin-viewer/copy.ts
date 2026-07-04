@@ -32,7 +32,7 @@ export const COPY: Record<Language, CopyShape> = {
     obverse: "Obverse: Tanit",
     reverse: "Reverse: standing horse",
     body1:
-      "Carthaginian electrum stater, circa 310–290 BCE, depicting Tanit and a standing horse.",
+      "This Carthaginian electrum stater depicts Tanit on the obverse and a standing horse on the reverse.",
     body2:
       "Digital 3D visualization based on the cited source image.",
     download: "Download 3D model (.glb)",
@@ -57,7 +57,7 @@ export const COPY: Record<Language, CopyShape> = {
     obverse: "Awers: Tanit",
     reverse: "Rewers: stojący koń",
     body1:
-      "Kartagiński stater z elektronu, około 310–290 p.n.e., przedstawiający Tanit i stojącego konia.",
+      "Ten kartagiński stater z elektronu przedstawia Tanit na awersie i stojącego konia na rewersie.",
     body2:
       "Cyfrowa wizualizacja 3D oparta na wskazanej fotografii źródłowej.",
     download: "Pobierz model 3D (.glb)",
@@ -82,7 +82,7 @@ export const COPY: Record<Language, CopyShape> = {
     obverse: "Avers : Tanit",
     reverse: "Revers : cheval debout",
     body1:
-      "Statère carthaginois en électrum, vers 310–290 av. J.-C., représentant Tanit et un cheval debout.",
+      "Ce statère carthaginois en électrum représente Tanit à l’avers et un cheval debout au revers.",
     body2:
       "Visualisation 3D numérique fondée sur l’image source créditée.",
     download: "Télécharger le modèle 3D (.glb)",
