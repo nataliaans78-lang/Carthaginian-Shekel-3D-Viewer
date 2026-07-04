@@ -31,6 +31,9 @@ export default function TopControls({
   preset,
   ui,
 }: TopControlsProps) {
+  const resetLabel = `${copy.reset} (R)`;
+  const autoRotateLabel = `${autoRotate ? copy.autoRotateOn : copy.autoRotateOff} (A)`;
+
   return (
     <div
       className={`${styles.topControls} flex shrink-0 flex-wrap items-center justify-start gap-[clamp(8px,0.9vw,14px)] py-3 text-[clamp(11px,0.92vw,14px)] text-white/85`}
@@ -67,9 +70,10 @@ export default function TopControls({
       </div>
 
       <button
-        aria-label={copy.reset}
+        aria-label={resetLabel}
         onClick={onReset}
         className={`${controlButtonClass} ${ui.soft} ${ui.bgSoft} ${ui.hover}`}
+        title={resetLabel}
         type="button"
       >
         <RotateCcw className="h-[clamp(13px,0.98vw,16px)] w-[clamp(13px,0.98vw,16px)]" />
@@ -77,10 +81,11 @@ export default function TopControls({
       </button>
 
       <button
-        aria-label={autoRotate ? copy.autoRotateOn : copy.autoRotateOff}
+        aria-label={autoRotateLabel}
         aria-pressed={autoRotate}
         onClick={onToggleAutoRotate}
         className={`${controlButtonClass} min-w-0 shrink max-w-[clamp(118px,16vw,170px)] ${ui.soft} ${ui.bgSoft} ${ui.hover}`}
+        title={autoRotateLabel}
         type="button"
       >
         <RefreshCw
