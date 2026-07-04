@@ -22,6 +22,9 @@ import {
 } from "./constants";
 import type { CopyShape, Language, PresetName } from "./copy";
 
+const INTERACTIVE_TARGET_SELECTOR =
+  'button, a, input, textarea, select, [contenteditable], [role="button"], [role="link"]';
+
 type CoinSceneProps = {
   autoRotate: boolean;
   copy: CopyShape;
@@ -312,8 +315,8 @@ function CoinModel({
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      const target = event.target as HTMLElement | null;
-      if (target && (target.tagName === "INPUT" || target.tagName === "TEXTAREA")) {
+      const target = event.target;
+      if (target instanceof Element && target.closest(INTERACTIVE_TARGET_SELECTOR)) {
         return;
       }
       if (!group.current) return;

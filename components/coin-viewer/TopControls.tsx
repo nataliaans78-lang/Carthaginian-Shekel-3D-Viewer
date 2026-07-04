@@ -8,6 +8,7 @@ import type { CopyShape, PresetName } from "./copy";
 type TopControlsProps = {
   autoRotate: boolean;
   copy: CopyShape;
+  isMobileInfoOpen: boolean;
   onChangePreset: (preset: PresetName) => void;
   onReset: () => void;
   onToggleAutoRotate: () => void;
@@ -22,6 +23,7 @@ const controlButtonClass =
 export default function TopControls({
   autoRotate,
   copy,
+  isMobileInfoOpen,
   onChangePreset,
   onReset,
   onToggleAutoRotate,
@@ -43,6 +45,7 @@ export default function TopControls({
           {PRESET_OPTIONS.map((value) => (
             <button
               key={value}
+              aria-pressed={preset === value}
               onClick={() => onChangePreset(value)}
               className={`cursor-pointer whitespace-nowrap rounded-full px-[clamp(8px,0.85vw,10px)] py-[clamp(3px,0.45vw,4px)] text-[clamp(10px,0.78vw,11px)] font-semibold transition ${
                 preset === value
@@ -64,6 +67,7 @@ export default function TopControls({
       </div>
 
       <button
+        aria-label={copy.reset}
         onClick={onReset}
         className={`${controlButtonClass} ${ui.soft} ${ui.bgSoft} ${ui.hover}`}
         type="button"
@@ -73,6 +77,8 @@ export default function TopControls({
       </button>
 
       <button
+        aria-label={autoRotate ? copy.autoRotateOn : copy.autoRotateOff}
+        aria-pressed={autoRotate}
         onClick={onToggleAutoRotate}
         className={`${controlButtonClass} min-w-0 shrink max-w-[clamp(118px,16vw,170px)] ${ui.soft} ${ui.bgSoft} ${ui.hover}`}
         type="button"
@@ -88,6 +94,9 @@ export default function TopControls({
       </button>
 
       <button
+        aria-controls="mobile-info-panel"
+        aria-expanded={isMobileInfoOpen}
+        aria-label={copy.info}
         onClick={onToggleMobileInfo}
         className={`${styles.mobileInfoToggle} ${controlButtonClass} ${ui.soft} ${ui.bgSoft} ${ui.hover}`}
         type="button"
