@@ -1,4 +1,4 @@
-# Carthaginian Coin 3D Viewer
+# Carthaginian Electrum Stater 3D Viewer
 
 ![Banner](public/img_screenshot/banner.png)
 
@@ -18,12 +18,11 @@ An interactive digital 3D visualization of a Carthaginian electrum stater, circa
 ## Screenshots
 
 <p align="center">
-  <img src="public/img_screenshot/screenshot_1.png" width="48%" alt="3D coin viewer screenshot" />
-  <img src="public/img_screenshot/screenshot_2.png" width="48%" alt="3D coin viewer screenshot" />
-</p>
+  <img src="public/img_screenshot/screenshot_1.png" width="48%" alt="Museum lighting view of the Carthaginian electrum stater" />
+<img src="public/img_screenshot/screenshot_2.png" width="48%" alt="Gallery lighting view of the Carthaginian electrum stater" /></p>
 
 <p align="center">
-  <img src="public/img_screenshot/screenshot_3.png" width="35%" alt="3D coin viewer screenshot" />
+<img src="public/img_screenshot/screenshot_3.png" width="35%" alt="Mobile view of the 3D coin viewer" />
 </p>
 
 ## Features
@@ -31,13 +30,35 @@ An interactive digital 3D visualization of a Carthaginian electrum stater, circa
 - Interactive GLB rendering
 - Museum and gallery lighting modes
 - Rotate, zoom, and pan controls
+- Keyboard shortcuts
 - Responsive interface
+- Mobile/tablet performance tuning
+- Basic accessibility states for controls
+
+## Controls
+
+- Drag / LMB: rotate
+- Mouse wheel: zoom
+- RMB: pan
+- 1 / 2: switch lighting mode
+- R: reset view
+- A: toggle auto-rotate
 
 ## Technology
 
 - Next.js
 - React
 - Three.js
+
+## Project notes
+
+This project focuses on a compact interactive 3D exhibit experience:
+
+- static export for GitHub Pages
+- responsive 3D scene
+- multilingual UI
+- documented third-party asset licensing
+- cleaned public assets and lighter deployment artifact
 
 ## Local development
 
