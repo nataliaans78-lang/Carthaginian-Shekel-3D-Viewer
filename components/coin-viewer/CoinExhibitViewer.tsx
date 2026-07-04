@@ -8,6 +8,9 @@ import { COPY, type Language, type PresetName } from "./copy";
 import DesktopInfoPanel from "./DesktopInfoPanel";
 import TopControls from "./TopControls";
 
+const INTERACTIVE_TARGET_SELECTOR =
+  'button, a, input, textarea, select, [contenteditable], [role="button"], [role="link"]';
+
 export default function CoinExhibitViewer() {
   const [lang, setLang] = useState<Language>("en");
   const [autoRotate, setAutoRotate] = useState(true);
@@ -53,9 +56,13 @@ export default function CoinExhibitViewer() {
   }, []);
 
   useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
+
+  useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
-      const target = event.target as HTMLElement | null;
-      if (target && (target.tagName === "INPUT" || target.tagName === "TEXTAREA")) {
+      const target = event.target;
+      if (target instanceof Element && target.closest(INTERACTIVE_TARGET_SELECTOR)) {
         return;
       }
 
@@ -83,6 +90,7 @@ export default function CoinExhibitViewer() {
         <TopControls
           autoRotate={autoRotate}
           copy={copy}
+          isMobileInfoOpen={isMobileInfoOpen}
           onChangePreset={changePreset}
           onReset={() => setResetSignal((value) => value + 1)}
           onToggleAutoRotate={() => setAutoRotate((value) => !value)}

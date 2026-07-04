@@ -25,6 +25,9 @@ export default function MobileInfoPanel({
 }: MobileInfoPanelProps) {
   return (
     <motion.div
+      id="mobile-info-panel"
+      aria-hidden={!isOpen}
+      inert={!isOpen}
       initial={false}
       animate={{
         opacity: isOpen ? 1 : 0,
