@@ -2,7 +2,7 @@
 
 ![Banner](public/img_screenshot/banner.png)
 
-An interactive digital visualization inspired by a Carthaginian electrum coin. The referenced coin image shows Tanit on the obverse and a standing horse on the reverse. This project is an interpretive 3D presentation, not an exact museum scan.
+An interactive digital 3D visualization of a Carthaginian electrum stater, circa 310–290 BCE, depicting Tanit on the obverse and a standing horse on the reverse. It is based on the cited source image and is not an exact museum scan.
 
 **Live demo:** https://nataliaans78-lang.github.io/Carthaginian-Shekel-3D-Viewer/
 
