@@ -78,13 +78,19 @@ export default function TopControls({
       >
         <RotateCcw className="h-[clamp(13px,0.98vw,16px)] w-[clamp(13px,0.98vw,16px)]" />
         <span className="truncate">{copy.reset}</span>
+        <span
+          aria-hidden="true"
+          className="hidden rounded border border-white/15 px-1.5 py-0.5 font-mono text-[9px] font-semibold leading-none text-white/60 min-[1041px]:inline-flex"
+        >
+          R
+        </span>
       </button>
 
       <button
         aria-label={autoRotateLabel}
         aria-pressed={autoRotate}
         onClick={onToggleAutoRotate}
-        className={`${controlButtonClass} min-w-0 shrink max-w-[clamp(118px,16vw,170px)] ${ui.soft} ${ui.bgSoft} ${ui.hover}`}
+        className={`${controlButtonClass} ${ui.soft} ${ui.bgSoft} ${ui.hover}`}
         title={autoRotateLabel}
         type="button"
       >
@@ -93,8 +99,14 @@ export default function TopControls({
             autoRotate ? "animate-spin" : ""
           }`}
         />
-        <span className="truncate">
+        <span>
           {autoRotate ? copy.autoRotateOn : copy.autoRotateOff}
+        </span>
+        <span
+          aria-hidden="true"
+          className="hidden rounded border border-white/15 px-1.5 py-0.5 font-mono text-[9px] font-semibold leading-none text-white/60 min-[1041px]:inline-flex"
+        >
+          A
         </span>
       </button>
 
