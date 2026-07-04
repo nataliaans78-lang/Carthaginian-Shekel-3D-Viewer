@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, useEffect, useMemo, useRef } from "react";
+import { Suspense, useEffect, useMemo, useRef, useState } from "react";
 import * as THREE from "three";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { ContactShadows, Html, OrbitControls, useGLTF } from "@react-three/drei";
@@ -24,6 +24,22 @@ import type { CopyShape, Language, PresetName } from "./copy";
 
 const INTERACTIVE_TARGET_SELECTOR =
   'button, a, input, textarea, select, [contenteditable], [role="button"], [role="link"]';
+const COMPACT_VIEWPORT_QUERY = "(max-width: 1040px)";
+
+function useCompactViewport() {
+  const [isCompactViewport, setIsCompactViewport] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia(COMPACT_VIEWPORT_QUERY);
+    const updateMatch = () => setIsCompactViewport(mediaQuery.matches);
+
+    updateMatch();
+    mediaQuery.addEventListener("change", updateMatch);
+    return () => mediaQuery.removeEventListener("change", updateMatch);
+  }, []);
+
+  return isCompactViewport;
+}
 
 type CoinSceneProps = {
   autoRotate: boolean;
@@ -262,7 +278,7 @@ function CoinModel({
     }
 
     fitObjectToView(group.current, camera, controlsRef.current, size.width);
-  }, [camera, cloned, resetSignal, size.width]);
+  }, [camera, cloned, resetSignal, size.height, size.width]);
 
   useFrame((_, delta) => {
     if (!group.current) return;
@@ -508,6 +524,7 @@ export default function CoinScene({
   resetSignal,
   ui,
 }: CoinSceneProps) {
+  const isCompactViewport = useCompactViewport();
   const background = PRESET_BACKGROUNDS[displayPreset];
   const incomingBackground = nextPreset ? PRESET_BACKGROUNDS[nextPreset] : null;
   const presetSettings = PRESETS[preset];
@@ -548,7 +565,7 @@ export default function CoinScene({
 
       <Canvas
         shadows
-        dpr={[1, 2]}
+        dpr={[1, isCompactViewport ? 1.5 : 2]}
         camera={{ position: [0, 0.04, 2.4], fov: 26 }}
         gl={{
           antialias: true,
@@ -573,7 +590,7 @@ export default function CoinScene({
             height={2.15}
             blur={presetSettings.shadowBlur}
             far={2.5}
-            resolution={1024}
+            resolution={isCompactViewport ? 512 : 1024}
           />
         </Suspense>
       </Canvas>
